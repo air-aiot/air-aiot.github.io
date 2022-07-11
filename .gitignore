@@ -1,5 +1,4 @@
 _site
 .jekyll-cache
 .vscode
-_includes/pubs.html
 /test-deploy.sh
