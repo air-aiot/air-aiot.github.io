@@ -5,16 +5,9 @@ yunxinliu:
     image: /img/people/yunxinliu.png
     bio: Professor
 
-example:
-    display_name: "Example"
-    webpage: 
-    role: grad
-    image: /img/people/prof-x.png
-    bio: Example
-
 xiangyuli:
     display_name: "Xiangyu Li"
     webpage: "https://xxxxyu.github.io"
-    role: ugrad
-    image: /img/people/jinx.jpg
-    bio: Happy new year!
+    role: grad
+    image: /img/people/xiangyuli.jpg
+    bio: 1st Year PhD Student
