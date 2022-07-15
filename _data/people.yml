@@ -1,13 +1,66 @@
+# Faculty
 yunxinliu:
     display_name: "Yunxin Liu"
     webpage: "https://yunxinliu.github.io/"
     role: faculty
     image: /img/people/yunxinliu.png
     bio: Professor
+    
+yuanchunli:
+    display_name: "Yuanchun Li"
+    webpage: "https://yuanchun-li.github.io" 
+    role: faculty
+    image: /img/people/yuanchunli.jpg
+    bio: Assistant Researcher
 
+# Graduate
 xiangyuli:
     display_name: "Xiangyu Li"
     webpage: "https://xxxxyu.github.io"
     role: grad
     image: /img/people/xiangyuli.jpg
     bio: 1st Year PhD Student
+    
+haowen:
+    display_name: "Hao Wen"
+    webpage: 
+    role: grad
+    image: /img/people/haowen.jpg
+    bio: 1st Year PhD Student
+
+xiangwang:
+    display_name: "Xiang Wang"
+    webpage: 
+    role: grad
+    image: 
+    bio: 2nd Year PhD Student
+
+# Intern
+ruikong:
+    display_name: "Rui Kong"
+    webpage: 
+    role: intern
+    image: 
+    bio: 2nd Year PhD Student
+
+jialianghan:
+    display_name: "Jialiang Han"
+    webpage: 
+    role: intern
+    image: /img/people/jialianghan.png
+    bio: 4th Year PhD Candidate
+
+weidonghuang:
+    display_name: "Weidong Huang"
+    webpage: "https://bbs.pediy.com/user-859945-1.htm"
+    role: intern
+    image: /img/people/weidonghuang.jpg
+    bio: 2nd Year Graduate Student
+
+# Former Intern
+jinruizhang:
+    display_name: "Jinrui Zhang"
+    webpage: "https://zjr.eis.mobi/"
+    role: fintern
+    image: /img/people/jinruizhang.png
+    bio: 4th Year PhD Student
