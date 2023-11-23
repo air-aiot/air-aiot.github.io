@@ -27,14 +27,20 @@ jobs:
 
       - name: ls current dir
         run: |
-          ls
           cd gh-pages
           ls
+          echo "----"
+          ls ForkAwesome
+          echo "----"
+          ls ForkAwesome/src
+          echo "----"
+          ls ForkAwesome/src/doc
+          echo "----"
+          ls ForkAwesome/src/doc/_includes
 
       - name: copy fork-awesome includes to root
         run: |
-          mkdir _includes
-          cp -r ForkAwesome/src/doc/_includes/* _includes/
+          cp -r ./ForkAwesome/src/doc/_includes .
           git add .
           git config --global user.email "action@github.com"
           git config --global user.name "GitHub Action"
