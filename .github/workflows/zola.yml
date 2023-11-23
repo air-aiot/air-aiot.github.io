@@ -16,35 +16,31 @@ jobs:
       - name: build_and_deploy
         uses: shalzz/zola-deploy-action@v0.17.2
         env:
-          PAGES_BRANCH: gh-pages
-          TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: checkout branch gh-pages
-        uses: actions/checkout@v2
-        with:
-          ref: gh-pages
-          path: gh-pages
+          BUILD_ONLY: true
+          # PAGES_BRANCH: gh-pages
+          # TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: ls current dir
         run: |
-          cd gh-pages
           ls
           echo "----"
-          ls ForkAwesome
+          ls public/ForkAwesome
           echo "----"
-          ls ForkAwesome/src
+          ls public/ForkAwesome/src
           echo "----"
-          ls ForkAwesome/src/doc
+          ls public/ForkAwesome/src/doc
           echo "----"
-          ls ForkAwesome/src/doc/_includes
+          ls public/ForkAwesome/src/doc/_includes
 
-      - name: copy fork-awesome includes to root
+      - name: copy fork-awesome includes
         run: |
+          cd public
           cp -r ./ForkAwesome/src/doc/_includes .
-          git add .
+          git init
           git config --global user.email "action@github.com"
           git config --global user.name "GitHub Action"
-          git commit -m "Add _includes"
+          git add .
+          git commit -m "Deploy to GitHub Pages"
       
       - name: push changes
         uses: ad-m/github-push-action@master
