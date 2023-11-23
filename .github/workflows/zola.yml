@@ -33,9 +33,12 @@ jobs:
           ls public/ForkAwesome/src/doc/_includes
 
       - name: copy fork-awesome includes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           cd public
-          cp -r ./ForkAwesome/src/doc/_includes .
+          ls -la
+          sudo cp -r ./ForkAwesome/src/doc/_includes .
           git init
           git config --global user.email "action@github.com"
           git config --global user.name "GitHub Action"
