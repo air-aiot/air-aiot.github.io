@@ -1,0 +1,74 @@
+{% extends "index.html" %}
+
+{% block extrahead %}
+<link rel="stylesheet" type="text/css" href="/team.css">{% endblock extrahead %}
+
+{% block content %}
+<main class="w3-container w3-content w3-padding-64">
+    <h1>{{ section.title }}</h1>
+    {{ section.content | safe }}
+    <br>
+    <h2>Faculty</h2>
+    <div class="equipe">
+        {% for person in section.extra.faculty %}
+        <div class="person">
+            {% set page = get_page(path=config.extra.theme.team_folder ~ "/" ~ person ~ ".md") %}
+            <a href="{{ page.permalink }}"><img
+                    src="{% if page.extra.avatar %}/avatars/{{ page.extra.avatar }}{% endif %}" /></a>
+            <a href="{{ page.permalink }}">
+                <h4>{% if page.extra.full_name %} {{ page.extra.full_name }} {% else %} {{page.title}} {% endif %}</h4>
+            </a>
+            <p>{{ page.description }}</p>
+        </div>
+        {% endfor %}
+    </div>
+
+    <h2>Post Doc</h2>
+    <div class="equipe">
+        {% for person in section.extra.postdoc %}
+        <div class="person">
+            {% set page = get_page(path=config.extra.theme.team_folder ~ "/" ~ person ~ ".md") %}
+            <a href="{{ page.permalink }}"><img
+                    src="{% if page.extra.avatar %}/avatars/{{ page.extra.avatar }}{% endif %}" /></a>
+            <a href="{{ page.permalink }}">
+                <h4>{% if page.extra.full_name %} {{ page.extra.full_name }} {% else %} {{page.title}} {% endif %}</h4>
+            </a>
+            <p>{{ page.description }}</p>
+        </div>
+        {% endfor %}
+    </div>
+
+    <h2>PhD Students</h2>
+    <div class="equipe">
+        {% for person in section.extra.phd %}
+        <div class="person">
+            {% set page = get_page(path=config.extra.theme.team_folder ~ "/" ~ person ~ ".md") %}
+            <a href="{{ page.permalink }}"><img
+                    src="{% if page.extra.avatar %}/avatars/{{ page.extra.avatar }}{% endif %}" /></a>
+            <a href="{{ page.permalink }}">
+                <h4>{% if page.extra.full_name %} {{ page.extra.full_name }} {% else %} {{page.title}} {% endif %}</h4>
+            </a>
+            <p>{{ page.description }}</p>
+        </div>
+        {% endfor %}
+    </div>
+
+    <h2>Intern</h2>
+    <div class="equipe">
+        {% for person in section.extra.intern %}
+        <div class="person">
+            {% set page = get_page(path=config.extra.theme.team_folder ~ "/" ~ person ~ ".md") %}
+            <a href="{{ page.permalink }}"><img
+                    src="{% if page.extra.avatar %}/avatars/{{ page.extra.avatar }}{% endif %}" /></a>
+            <a href="{{ page.permalink }}">
+                <h4>{% if page.extra.full_name %} {{ page.extra.full_name }} {% else %} {{page.title}} {% endif %}</h4>
+            </a>
+            <p>{{ page.description }}</p>
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- TODO: add previous members list -->
+
+</main>
+{% endblock content %}

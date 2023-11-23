@@ -1,0 +1,59 @@
+{# team pages uses author, author pages must be put in team folder #}
+
+<h1>{% if page.extra.full_name %} {{ page.extra.full_name }} {% else %} {{page.title}} {% endif %}</h1>
+{% if page.extra.avatar %}<img class="avatar" src="/avatars/{{ page.extra.avatar }}" />{% endif %}
+<ul>
+    {% if page.extra.phone %}
+    <li>
+        <i class="fa fa-phone" aria-hidden="true" title="Téléphone"></i>
+        <span class="sr-only">Téléphone&nbsp;:</span>
+        {{ page.extra.phone }}
+    </li>
+    {% endif %}
+    {% if page.extra.website %}
+    <li>
+        <a target="_blank" href="{{ page.extra.website }}" title="Site perso">
+            <i class="fa fa-globe-e" aria-hidden="true"></i>
+            <span class="sr-only">Site perso&nbsp;:</span>
+            {{ page.extra.website }}
+        </a>
+    </li>
+    {% endif %}
+    {% if page.extra.email %}
+    <li>
+        <a href="mailto:{{ page.extra.email }}" title="E-mail">
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+            <span class="sr-only">E-mail&nbsp;:</span>
+            {{ page.extra.email }}
+        </a>
+    </li>
+    {% endif %}
+    {% if page.extra.xmpp %}
+    <li>
+        <a href="xmpp:{{ page.extra.xmpp }}" title="XMPP">
+            <i class="fa fa-xmpp" aria-hidden="true"></i>
+            <span class="sr-only">XMPP&nbsp;:</span>
+            {{ page.extra.xmpp }}
+        </a>
+    </li>
+    {% endif %}
+    {% if page.extra.mastodon %}
+    <li>
+        <a href="{{ page.extra.mastodon }}">
+            <i class="fa fa-mastodon" aria-hidden="true"></i>
+            Mastodon
+        </a>
+    </li>
+    {% endif %}
+    {% if page.extra.matrix %}
+    <li>
+        <a href="https://matrix.to/#/{{ page.extra.matrix }}" title="Matrix">
+            <i class="fa fa-matrix-org" aria-hidden="true"></i>
+            <span class="sr-only">Matrix&nbsp;:</span>
+            {{ page.extra.matrix }}
+    </li>
+    </a>
+    {% endif %}
+</ul>
+
+{{ page.content | safe }}

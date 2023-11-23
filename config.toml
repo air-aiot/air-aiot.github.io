@@ -1,0 +1,62 @@
+# The URL the site will be built for
+base_url = "https://air-aiot.github.io"
+
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = true
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = true
+
+# The theme used by the site (place this line before [markdown] and [extra])
+theme = "albatros"
+
+# ======= Albatros Configs ========
+
+taxonomies = [
+    {name = "authors"},
+    {name = "tags"},
+    {name = "category"},
+    ]
+
+[markdown]
+highlight_code = true
+highlight_theme = "base16-ocean-light"
+
+# some extra variables for the site
+[extra]
+name = "AIR-AIoT"
+logo = "/img/albatros.png"
+# content source is used to link to source files
+content_source = "https://git.42l.fr/HugoTrentesaux/Albatros/src/branch/master/content"
+flag = "🇬🇧"
+
+# the following links will appear in nav menu
+[[extra.nav.link]]
+name = "Albatros"
+url = "https://git.42l.fr/"
+img = "https://simpleicons.org/icons/gitea.svg"
+[[extra.nav.link]]
+name = "Zola"
+url = "https://www.getzola.org/"
+img = "/img/albatros.png"
+[[extra.nav.link]]
+name = "Mastodon"
+url = "/"
+img = "https://simpleicons.org/icons/mastodon.svg"
+
+# some strings used in the theme
+[extra.theme]
+toc_title = "Table of contents"
+see_author_articles = "See articles on this website"
+articles_on_this_website = "Articles on this website"
+taxonomies_description = "Here is an extensive list of taxonomies"
+team_folder = "team"
+links_label = "Links"
+
+# links to translated version of the site
+[extra.translations.fr]
+base_url = "https://example.fr/"
+flag = "🇫🇷"
+[extra.translations.es]
+base_url = "https://example.es/"
+flag = "🇪🇸"
