@@ -20,7 +20,7 @@ jobs:
           # PAGES_BRANCH: gh-pages
           # TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: copy fork-awesome includes
+      - name: fix fork-awesome issues and deploy
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_ACTOR: ${{ github.actor }}
