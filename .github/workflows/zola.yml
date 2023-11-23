@@ -19,11 +19,26 @@ jobs:
           PAGES_BRANCH: gh-pages
           TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: checkout gh-pages
-        uses: actions/checkout@v4
+      - name: checkout branch gh-pages
+        uses: actions/checkout@v2
         with:
           ref: gh-pages
           path: gh-pages
 
+      - name: ls current dir
+        run: ls
+
       - name: copy fork-awesome includes to root
-        run: cp -r ForkAwesome/src/doc/_includes .
+        run: |
+          mkdir _includes
+          cp -r ForkAwesome/src/doc/_includes/* _includes/
+          git add .
+          git config --global user.email "action@github.com"
+          git config --global user.name "GitHub Action"
+          git commit -m "Add _includes"
+      
+      - name: push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages
