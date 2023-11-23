@@ -29,6 +29,8 @@ jobs:
         run: |
           cd public
           sudo cp -r ./ForkAwesome/src/doc/_includes .
+          sudo cp -r ./ForkAwesome/src/doc/_layouts .
+          sudo cp -r ./ForkAwesome/src/doc/_plugins .
           sudo git init
           sudo git config --global user.email "action@github.com"
           sudo git config --global user.name "GitHub Action"
