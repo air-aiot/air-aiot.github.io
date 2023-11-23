@@ -23,6 +23,9 @@ jobs:
       - name: copy fork-awesome includes
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_ACTOR: ${{ github.actor }}
+          GITHUB_HOSTNAME: github.com
+          TARGET_REPOSITORY: ${{ github.repository }}
         run: |
           cd public
           sudo cp -r ./ForkAwesome/src/doc/_includes .
@@ -31,10 +34,4 @@ jobs:
           sudo git config --global user.name "GitHub Action"
           sudo git add .
           sudo git commit -m "Deploy to GitHub Pages"
-      
-      - name: push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: gh-pages
-          force: true
+          git push --force "https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@${GITHUB_HOSTNAME}/${TARGET_REPOSITORY}.git" master:"gh-pages"
