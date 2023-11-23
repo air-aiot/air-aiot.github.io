@@ -18,3 +18,12 @@ jobs:
         env:
           PAGES_BRANCH: gh-pages
           TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: checkout gh-pages
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          path: gh-pages
+
+      - name: copy fork-awesome includes to root
+        run: cp -r ForkAwesome/src/doc/_includes .
