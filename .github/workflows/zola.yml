@@ -20,30 +20,17 @@ jobs:
           # PAGES_BRANCH: gh-pages
           # TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: ls current dir
-        run: |
-          ls
-          echo "----"
-          ls public/ForkAwesome
-          echo "----"
-          ls public/ForkAwesome/src
-          echo "----"
-          ls public/ForkAwesome/src/doc
-          echo "----"
-          ls public/ForkAwesome/src/doc/_includes
-
       - name: copy fork-awesome includes
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           cd public
-          ls -la
           sudo cp -r ./ForkAwesome/src/doc/_includes .
-          git init
-          git config --global user.email "action@github.com"
-          git config --global user.name "GitHub Action"
-          git add .
-          git commit -m "Deploy to GitHub Pages"
+          sudo git init
+          sudo git config --global user.email "action@github.com"
+          sudo git config --global user.name "GitHub Action"
+          sudo git add .
+          sudo git commit -m "Deploy to GitHub Pages"
       
       - name: push changes
         uses: ad-m/github-push-action@master
