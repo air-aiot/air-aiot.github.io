@@ -4,7 +4,8 @@ description = "short desc."
 
 [extra]
 full_name = "Tao Yu"
-avatar = "albatros.png"
+avatar = "yutao.jpeg"
+email = "1746694345@qq.com"
 
 [taxonomies]
 authors = ["yutao"]

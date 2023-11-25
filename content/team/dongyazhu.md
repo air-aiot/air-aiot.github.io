@@ -4,7 +4,9 @@ description = "short desc."
 
 [extra]
 full_name = "Yazhu Dong"
-avatar = "albatros.png"
+avatar = "dongyazhu.jpeg"
+website = "https://samuraibupt.github.io/"
+email = "31409163@bupt.edu.cn"
 
 [taxonomies]
 authors = ["dongyazhu"]

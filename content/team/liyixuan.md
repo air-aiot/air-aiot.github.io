@@ -4,7 +4,8 @@ description = "short desc."
 
 [extra]
 full_name = "Yixuan Li"
-avatar = "albatros.png"
+avatar = "liyixuan.jpeg"
+email = "yixuanleeee@gmail.com"
 
 [taxonomies]
 authors = ["liyixuan"]

@@ -4,7 +4,7 @@ description = "Professor"
 
 [extra]
 full_name = "Yunxin Liu"
-avatar = "TEMPLATE.svg"
+avatar = "liuyunxin.png"
 website = "https://yunxinliu.github.io/"
 email = "liuyunxin@air.tsinghua.edu.cn"
 

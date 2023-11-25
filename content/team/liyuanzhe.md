@@ -4,7 +4,7 @@ description = "short desc."
 
 [extra]
 full_name = "Yuanzhe Li"
-avatar = "albatros.png"
+avatar = "liyuanzhe.jpeg"
 
 [taxonomies]
 authors = ["liyuanzhe"]
