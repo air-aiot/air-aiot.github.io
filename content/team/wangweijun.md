@@ -1,6 +1,6 @@
 +++
 title = "wangweijun"
-description = "short desc."
+description = "Edge AI & Video Analytics."
 
 [extra]
 full_name = "Weijun Wang"
